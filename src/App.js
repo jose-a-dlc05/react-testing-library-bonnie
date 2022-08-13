@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -10,7 +9,10 @@ function App() {
 		<div>
 			<button
 				disabled={disabled}
-				style={{ backgroundColor: buttonColor }}
+				style={{
+					backgroundColor: disabled ? 'gray' : buttonColor,
+					color: 'white',
+				}}
 				onClick={() => setButtonColor(newButtonColor)}
 			>
 				Change to {newButtonColor}
