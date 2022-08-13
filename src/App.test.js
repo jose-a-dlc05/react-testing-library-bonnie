@@ -22,7 +22,7 @@ test('checkbox disables button', () => {
 	const colorChanger = screen.getByRole('button', { name: 'Change to blue' });
 	expect(colorChanger).toBeEnabled();
 
-	const checkbox = screen.getByRole('checkbox');
+	const checkbox = screen.getByRole('checkbox', { name: 'Disable button' });
 	expect(checkbox).not.toBeChecked();
 
 	fireEvent.click(checkbox);
