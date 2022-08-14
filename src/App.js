@@ -6,32 +6,15 @@ export function replaceCamelWithSpaces(colorName) {
 }
 
 function App() {
-	const [buttonColor, setButtonColor] = useState('MediumVioletRed');
-	const [disabled, setDisabled] = useState(false);
-	const newButtonColor =
-		buttonColor === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed';
-	return (
-		<div>
-			<button
-				disabled={disabled}
-				style={{
-					backgroundColor: disabled ? 'gray' : buttonColor,
-					color: 'white',
-				}}
-				onClick={() => setButtonColor(newButtonColor)}
-			>
-				Change to {replaceCamelWithSpaces(newButtonColor)}
-			</button>
-			<input
-				type='checkbox'
-				id='disable-button-checkbox'
-				defaultChecked={disabled}
-				aria-checked={disabled}
-				onChange={(e) => setDisabled(e.target.checked)}
-			/>
-			<label htmlFor='disable-button-checkbox'>Disable button</label>
-		</div>
-	);
+	// Create two useState hooks
+	// buttonColor
+	// disabled
+	// Create a new variable called newButtonColor which toggles between colors "MediumVioletRed" or "MidnightBlue" when button is clicked
+	// Create a checkbox which disables or enables the button
+	// Create a helper function called "replaceCamelWithSpaces" that takes the colorName argument and returns the color name with spaces before the capital letter
+	// Use regex: (/\B([A-Z])\B/g, ' $1')
+
+	return <div></div>;
 }
 
 export default App;
